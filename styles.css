@@ -5,24 +5,28 @@
     text-align: center;
 }
 
+
 #searchInput {
     padding: 10px;
-    margin-bottom: 10px;
-    width: 70%;
-    border: 1px solid #ccc;
+    margin: 10px;
+    margin-left: 37rem;
+    width: 40%;
+    border: 1px solid #110c0c;
     border-radius: 5px;
 }
 
 #searchButton {
-    padding: 10px 20px;
+    padding: 10px;
     background-color: rgb(255,80,50);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 450px;
 }
 
 #searchButton i {
@@ -33,17 +37,143 @@
     margin-top: 20px;
 }
 
-.pokemon-card {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.navbar {
+    background-color: #7fadcd;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: -8px;    
 }
 
-.pokemon-card img {
+/* Hide the input file field */
+#imageInput {
+    display: none;
+}
+
+/* Style the search wrapper */
+.search-wrapper {
+    position: relative;
+}
+
+/* Style the upload icon */
+.upload-icon {
+    position: absolute;
+    top: 50%;
+    left: 890px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.upload-icon img {
+    width: 24px; /* Adjust the width of the image icon */
+    height: 24px; /* Adjust the height of the image icon */
+}
+
+/* Style the tooltip */
+.tooltip {
+    position: absolute;
+    top: calc(100% + 5px); /* Position the tooltip below the upload icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Tooltip background color */
+    color: #fff; /* Tooltip text color */
+    padding: 4px;
+    width: 90px;
+    border-radius: 3px;
+    font-size: 12px; /* Tooltip text size */
+    opacity: 0; /* Hide the tooltip by default */
+    pointer-events: none; /* Disable pointer events to prevent tooltip from interfering with clicks */
+    transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+/* Show tooltip on hover */
+.upload-icon:hover .tooltip {
+    opacity: 1; /* Show the tooltip on hover */
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+#pokemonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pokemon-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f9f9f9;
+    width: 270px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pokemon-card h3 {
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+.pokemon-id {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+/* CSS to create a grid layout */
+#pokemonContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 6 columns */
+    gap: 10px; /* Gap between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pokemon-image {
+    padding: 10px;
+    text-align: center;
+    margin-top: -10px;
+    position: relative; /* Add position relative */
+}
+
+.pokemon-img {
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    transition: transform 0.3s;}
+
+.pokemon-details {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-button {
+    background-color: #7fadcd;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.details-button:hover {
+    background-color:#5298ca;
+}
+
+/* Scale up the image when hovered */
+.pokemon-card:hover .pokemon-img {
+    transform: scale(1.5); /* Increase the scale of the image */
 }

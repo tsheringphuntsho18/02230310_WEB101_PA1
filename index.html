@@ -6,16 +6,46 @@
     <title>Pokedex</title>
     <link rel="icon" type="image/x-icon" href="/assets/po.ico">
     <link rel="stylesheet" href="styles.css">
+    <!--This link is for icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Pokedex</h1>
-        <input type="text" id="searchInput" placeholder="Search Pokemon..." onkeypress="handleKeyPress(event)">
+    <nav class="navbar">
+        <h1><i class="fas fa-home"></i>Pokedex</h1>
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search Pokemon by id, name or image..." onkeypress="handleKeyPress(event)">
+            <label for="imageInput" class="upload-icon">
+                <img src="assets/imgIcon.png" alt="Upload Image">
+                <span class="tooltip">Upload Image</span>
+            </label>
+            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
+        </div>
         <button id="searchButton" onclick="searchPokemon()"><i class="fas fa-search"></i></button>
+    </nav>
+
+    <div id="pokemonContainer"></div>
+    <div id="paginationButtons"></div>
+    
+    <div class="container">
         <div id="pokemonInfo"></div>
     </div>
+
+    <template id="pokemonCardTemplate">
+        <div class="pokemon-card">
+            <p class="pokemon-id"></p>
+            <div class="pokemon-image">
+                <img class="pokemon-img" src="" alt="">
+            </div>
+            <div class="pokemon-details">
+                <h3 class="pokemon-name"></h3>
+                
+                <button class="details-button">View Details</button>
+            </div>
+        </div>
+    </template>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
