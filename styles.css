@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color:black;
+}  
 
 #searchInput {
     padding: 10px;
@@ -177,3 +181,20 @@ i:hover {
 .pokemon-card:hover .pokemon-img {
     transform: scale(1.5); /* Increase the scale of the image */
 }
+
+#pokemon-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: aquamarine;
+    padding: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: #000000 solid 2px;
+    box-shadow: #5298ca 0px 0px 10px;
+}
+

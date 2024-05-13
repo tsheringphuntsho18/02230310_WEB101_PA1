@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Details</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="pokemon-detail.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/assets/po.ico">
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="index.html"><h1><i class="fas fa-home"></i>Pokedex</h1></a>
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search Pokemon by id, name or image..." onkeypress="handleKeyPress(event)">
+            <label for="imageInput" class="upload-icon">
+                <img src="assets/imgIcon.png" alt="Upload Image">
+                <span class="tooltip">Upload Image</span>
+            </label>
+            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
+        </div>
+        <button id="searchButton" onclick="searchPokemon()"><i class="fas fa-search"></i></button>
+    </nav>
+
+    <div id="pokemon-details"></div>
+
+    <script src="pokemon-detail.js" defer></script>
+
+  </body>
+</html>

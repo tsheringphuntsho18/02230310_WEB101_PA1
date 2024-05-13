@@ -3,6 +3,10 @@ function handleKeyPress(event) {
         searchPokemon();
     }
   }
+// Function to navigate to detail.html with Pokémon ID as URL parameter
+function viewDetails(pokemonId) {
+  window.location.href = `detail.html?id=${pokemonId}`;
+}
   
   function searchPokemon() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
@@ -87,11 +91,6 @@ function handleKeyPress(event) {
         handlePagination(currentPage);
     }
   });
-  
-  // Function to view details of a Pokémon
-  function viewDetails(pokemonUrl) {
-    // Implement details view logic here (e.g., fetch additional data, display details modal)
-  }
   
   // Initialize pagination and render initial Pokémon cards
   handlePagination(currentPage);
