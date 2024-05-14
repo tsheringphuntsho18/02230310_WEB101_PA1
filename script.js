@@ -12,6 +12,7 @@ function searchPokemon() {
   const searchInput = document.getElementById('searchInput').value.toLowerCase();
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${searchInput}`;
   
+  // uodate
   fetch(apiUrl)
       .then(response => {
           if (!response.ok) {
