@@ -40,6 +40,7 @@ function searchPokemon() {
       reader.readAsDataURL(file);
   }
 }*/
+
 const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon';
 const ITEMS_PER_PAGE = 16;
   

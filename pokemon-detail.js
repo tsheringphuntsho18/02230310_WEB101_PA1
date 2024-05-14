@@ -1,4 +1,3 @@
-// pokemon-detail.js
 document.addEventListener("DOMContentLoaded", async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const pokemonId = urlParams.get('id');
